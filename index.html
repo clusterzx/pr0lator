@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" style="background: #282d32;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>pr0lator | BETA |</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/Lato.css">
+    <link rel="stylesheet" href="/assets/css/Nunito.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="/assets/css/untitled-1.css">
+    <link rel="stylesheet" href="/assets/css/untitled.css">
+    <style>
+    #loading {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255,255,255,.3);
+        border-radius: 50%;
+        border-top-color: rgb(212,54,41);
+        animation: spin 1s ease-in-out infinite;
+        -webkit-animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+        to { -webkit-transform: rotate(360deg); }
+        }
+        @-webkit-keyframes spin {
+        to { -webkit-transform: rotate(360deg); }
+    }
+    </style>
+</head>
+
+<body style="background: rgb(40,45,50);">
+    <nav class="navbar navbar-dark navbar-expand-md sticky-top bg-dark">
+        <div class="container-fluid"><a class="navbar-brand d-md-none" href="#"><img src="/assets/img/companylogo.svg" width="100" height="100" alt="Logo"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse d-md-flex" id="navcol-1">
+                <ul class="navbar-nav d-flex justify-content-evenly mx-auto w-100">
+                    <li class="nav-item"><a class="nav-link text-center" href="#"><i class="fas fa-home"></i>&nbsp;Startseite</a></li>
+                    <li class="nav-item"><a class="nav-link text-center" href="#"><i class="fas fa-chart-bar"></i>&nbsp;Statistiken</a></li>
+                </ul><a class="navbar-brand d-none d-md-block me-0"><img src="/assets/img/pr0logo.png" width="56" height="56" alt="Logo" style="border-radius: 15px;"></a>
+                <ul class="navbar-nav d-flex justify-content-evenly mx-auto w-100">
+                    <li class="nav-item"><a class="nav-link text-center" href="#"><i class="fab fa-github"></i>&nbsp;GitHub</a></li>
+                    <li class="nav-item pb-2 pb-md-0"><a class="nav-link text-nowrap text-center" href="#"><i class="fas fa-at"></i>&nbsp;Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" style="background: #282d32;">
+        <div class="d-sm-flex justify-content-between align-items-center mb-4"></div>
+        <section class="py-4 py-xl-5">
+            <div class="container">
+                <div class="text-white bg-dark border rounded border-0 p-4 p-md-5" style="height: 195.391px;">
+                    <h2 class="fw-bold mb-3" style="color: rgb(212,54,41);">pr0lator</h2>
+                    <p class="mb-4">Übersetze Russenpropaganda oder auch normale pr0gramm Videos ins Englische.<br>Der Dienst ist aktuell noch sehr langsam und liefert nicht immer akkurate Ergebnisse.&nbsp;</p>
+                </div>
+            </div>
+        </section>
+        <form>
+            <div class="card shadow mb-3" style="background: rgb(40,45,50);border-style: solid;border-color: rgb(174,37,7);width: 50%;margin-left: 25%;">
+                <div class="card-header py-3" style="background: rgb(52,58,64);border-color: rgb(40,45,50);"><span style="color: var(--bs-white);font-weight: bold;margin-left: 0%;border-color: rgb(212,54,41);">Optionen</span></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 col-lg-8 col-xxl-12">
+                            <div class="mb-3"><label class="form-label" for="service_name" style="color: rgb(255,255,255);"><strong>URL:</strong></label><input id="url" class="form-control" type="text" name="url" required="" style="width: 100%;margin-left: 0;background: rgb(52,58,64);border-color: rgb(212,54,41);color: rgb(212,54,41);"></div>
+                            <hr style="background: #d43629;color: rgb(212,54,41);height: 4px;border-style: solid;opacity: 0.50;">
+                        </div>
+                    </div>
+                    <div class="mb-3"><label class="form-label" for="service_client_payment_validated" style="color: rgb(255,255,255);"><strong>Wie soll der Output aussehen?</strong></label>
+                        <div class="form-group mb-3">
+                            <div class="form-check"><input class="form-check-input" type="radio" id="option_video" name="RadioOption" value="video" required="" style="background: rgb(52,58,64);" checked=""><label class="form-check-label" for="service_client_payment_validated-1" style="color: rgb(255,255,255);">Video</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" id="option_text" name="RadioOption" value="text" required="" style="background: rgb(52,58,64);"><label class="form-check-label" for="service_client_payment_validated-2" style="color: rgb(255,255,255);">Text</label></div>
+                        </div>
+                    </div>
+                    <hr style="background: #d43629;color: rgb(212,54,41);height: 4px;border-style: solid;opacity: 0.50;"><button id="translate" class="btn btn-primary" type="button" style="background: rgb(212,54,41);border-style: none;width: 100%;">Translate</button>
+                    <div id="loading" style="margin-left: 49%; margin-top: 15px;" hidden></div>
+                </div>
+            </div>
+            <div id="result" class="card shadow mb-3" style="background: rgb(40,45,50);border-style: solid;border-color: rgb(174,37,7);width: 50%;margin-left: 25%;">
+                <div class="card-header py-3" style="background: rgb(52,58,64);border-color: rgb(40,45,50);"><span style="color: var(--bs-white);font-weight: bold;margin-left: 0%;border-color: rgb(212,54,41);">Ergebnis</span></div>
+                <div class="card-body"><video width="560" height="315" controls="" muted="" style="width: 100%;border-style: solid;border-color: rgb(212,54,41);"></video><textarea id="textresult" class="form-control" style="background: rgb(52,58,64);border-style: solid;border-color: rgb(212,54,41);height: 250px;color: rgb(255,255,255);" readonly></textarea></div>
+            </div>
+            <div class="text-end mb-3"></div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#result").hide();
+            $("#translate").click(function() {
+                const chosedOption = $("input[name='RadioOption']:checked").val();
+                $.ajax({
+                    type: "POST",
+                    url: "/convert",
+                    data: {
+                        url: $("#url").val(),
+                        option: $("input[name='RadioOption']:checked").val()
+                    },
+                    beforeSend: function() {
+                        $("#loading").removeAttr("hidden");
+                        var url = $("#url").val();
+                        console.log("Start converting of URL: " + url + " with OPTION: " + chosedOption);
+                    },
+                    success: function(response) {
+                        $('html, body').animate({
+                            scrollTop: $(document).height()
+                        }, 'slow');
+                        var outputResponse = response.split("\n").slice(0, -1).join("\n");
+                        console.log("Response got from server: " + response)
+                        $("#loading").attr("hidden", "");
+                        $("#result").show();
+                        if (chosedOption == "video") {
+                            $("#result video").attr("src", "/watch/" + response);
+                            $("#result textarea").hide();
+                        }else {
+                            $("#result textarea").val(atob(response));
+                            $("#result video").hide();
+                        }
+                    },
+                    error: function(response) {
+                        $("#loading").hide();
+                        $("#result input").val("Error while converting");
+                        $("#result video").hide();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

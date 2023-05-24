@@ -1,0 +1,7 @@
+@media (min-width: 1400px) {
+  .text-dark {
+    --bs-text-opacity: 1;
+    color: #e3320b;
+  }
+}
+
