@@ -7,11 +7,6 @@
 ![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/clusterzx/pr0lator/master)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-**Inhaltsverzeichnis**
-
-[TOCM]
-
-[TOC]
 
 # Beschreibung
 
