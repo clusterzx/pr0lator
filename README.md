@@ -12,7 +12,7 @@
 
 pr0lator ist ein Nutzer-Bot für ein deutsches Imageboard. Er wurde entwickelt um Videos in anderen Sprachen ins Englische zu übersetzen. Er kann auf Kommentare reagieren in denen er markiert/getagged wurde. 
 
-Wurde pr0lator erwähnt nimmet er sich die Daten zu dem dazugehörigen Post, prüft ob es sich um ein Video handelt und übersetzt gesprochene Sprache ins Englische. 
+Wurde pr0lator erwähnt nimmt er sich die Daten zu dem dazugehörigen Post, prüft ob es sich um ein Video handelt und übersetzt gesprochene Sprache ins Englische. 
 
 Die Technik hinter dem übersetzen basiert auf dem von OpenAI erstellten ASR Model "**Whisper**". Hierbei handelt es sich um ein Custom Model mit SRT Conversion.
 
