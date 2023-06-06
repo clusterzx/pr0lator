@@ -6,11 +6,10 @@ import re
 import whisper_timestamped as whispered
 from whisper_timestamped.make_subtitles import write_srt
 import requests
-import pysubs2
 
 # torch.cuda.set_device(0)  # Select GPU 0
 # torch.cuda.empty_cache()  # Clear GPU memory
-#device = "cuda" if torch.cuda.is_available() else "cpu"
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 final_filename = str(uuid.uuid4())
 
