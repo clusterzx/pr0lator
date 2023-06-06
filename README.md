@@ -32,6 +32,9 @@ Für den Bot:
 Für den Converter:
 1. Python (>= 3.10)
 2. ffmpeg
+3. torch
+4. whisper_timestamped
+5. OpenAI
 
 Für den Webservice:
 1. NodeJS (>= 18.6.6)
